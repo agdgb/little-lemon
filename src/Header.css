@@ -1,0 +1,44 @@
+html,
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    height: 50px;
+    padding: 2px;
+}
+
+nav {
+  padding: 0 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+}
+
+/* li {
+  width: 22px;
+} */
+
+li a {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+}

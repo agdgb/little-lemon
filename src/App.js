@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Header";
+import logo from './Logo.svg'
 
 function App() {
   return (
-    <div className="App">
-      Home Page
-    </div>
+    <>
+      <Header props={logo}/>
+      <main>main</main>
+      <footer>footer</footer>
+    </>
   );
 }
 
