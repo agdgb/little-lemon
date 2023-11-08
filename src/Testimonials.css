@@ -1,0 +1,28 @@
+.testimonials {
+  background-color: #d9d9d9;
+}
+
+.testimonials > article {
+  margin: 3.25rem 10% 0 10%;
+  padding: 6rem 0;
+}
+
+.testimonials-header {
+  text-align: center;
+  text-transform: uppercase;
+  font: 1.25rem karla;
+  font-weight: 800;
+  color: #333;
+}
+
+.testimonies {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.14rem;
+  padding-top: 2rem;
+}
+
+/* .testimonials {
+  margin-top: 5rem;
+  padding: 5rem;
+} */

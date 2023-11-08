@@ -1,0 +1,50 @@
+.about-container {
+  display: flex;
+  padding: 3rem 0;
+  justify-content: space-between;
+  gap: 3.25rem;
+  margin: 0 10%;
+  /* min-height: 177rem; */
+  flex: 1;
+  padding-bottom: 3.25rem;
+  border: 1px solid red;
+}
+
+.about-left > .title {
+  font: 4rem "Markazi Text";
+  font-weight: 500;
+}
+
+.about-left > .subtitle {
+  font: 2.5rem "Markazi Text";
+  font-weight: 400;
+  color: #333;
+  padding-bottom: 2.5rem;
+}
+
+.about-right {
+  display: flex;
+  margin-right: -6.25rem;
+}
+
+.about-right > img {
+  position: relative;
+  width: 17rem;
+  height: 21rem;
+  border-radius: 1.25rem;
+  border: 1px solid #000;
+}
+
+.ads {
+  font: 1.25rem Karla;
+  font-weight: 700;
+  text-align: justify;
+  padding: 0 3.25rem 0 0;
+}
+
+.bottom-image {
+  top: 7.5rem;
+}
+.top-image {
+  left: -6.25rem;
+}

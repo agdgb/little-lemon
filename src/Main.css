@@ -1,0 +1,60 @@
+.hero-section {
+  background-color: #495e57;
+  padding: 0 10%;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3.125rem 0 1.5rem 0;
+}
+
+.top {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+}
+
+.hero-left > a {
+  display: inline-block;
+  font: 1rem Karla;
+  font-size: large;
+  width: 12.5rem;
+  text-decoration: none;
+  background-color: #f4ce14;
+  border: none;
+  color: black;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 2.188rem;
+}
+
+.title {
+  font: 4rem "Markai Text";
+  font-weight: 400;
+}
+
+.subtitle {
+  font: 2.5rem "Markazi Text";
+  font-weight: 400;
+}
+
+.description {
+  font: 1.125rem Karla;
+  letter-spacing: 0.063rem;
+  max-width: 40ch;
+}
+
+.hero-image {
+  position: relative;
+  border-radius: .5rem;
+  bottom: -50px;
+  height: 400px;
+  width: 300px;
+}

@@ -1,0 +1,36 @@
+.testimony {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1rem;
+  row-gap: 1rem;
+  border-radius: 0.4rem 0.4rem 0.8rem 0.8rem;
+  box-shadow: 0 4px 4px 0px rgba(159, 153, 153, 1);
+}
+
+.avatar {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+
+.img {
+  height: 3.2rem;
+  width: 3rem;
+  border: 1px solid rgba(217, 211, 211, 0.8);
+  padding: .2rem;
+  border-radius: 50%;
+}
+
+
+.rating, .name {
+  font: .875rem karla;
+  font-weight: 700;
+  color: #000;
+}
+
+
+.review {
+  font: .875rem Karla;
+  font-weight: 400;
+}

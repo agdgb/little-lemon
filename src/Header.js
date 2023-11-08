@@ -1,13 +1,15 @@
 import React from "react";
 import logo from "./Logo.svg";
-import './Header.css'
+import "./Header.css";
 
 function Header({ props }) {
   return (
-    <header>
-      <nav>
-        <img src={logo} alt="little lemon  logo" />
-        <ul>
+    <>
+      <nav className="nav-bar">
+        <div className="logo-container">
+          <img className="logo" src={logo} alt="little lemon  logo" />
+        </div>
+        <ul className="links">
           <li>
             <a href="">Home</a>
           </li>
@@ -21,14 +23,14 @@ function Header({ props }) {
             <a href="">Reservations</a>
           </li>
           <li>
-            <a href="">Order Online</a>
+            <a href="">Order Now</a>
           </li>
           <li>
             <a href="">Login</a>
           </li>
         </ul>
       </nav>
-    </header>
+    </>
   );
 }
 

@@ -1,0 +1,70 @@
+.footer {
+  margin: 7.5% 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-image > img {
+  height: 21rem;
+  width: 17rem;
+  border-radius: 1.25rem;
+}
+
+.link-items {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.link-items > a {
+  text-decoration: none;
+  font: 1.25rem Karla;
+  color: #333;
+  line-height: 1.625rem;
+  font-weight: 500;
+  margin: 0.1rem;
+}
+
+.footernav > h3 {
+  color: #495e57;
+  font: 1.25rem Karla;
+  font-weight: 800;
+}
+
+.contact > h3 {
+  color: #495e57;
+  font: 1.25rem Karla;
+  font-weight: 800;
+}
+
+.contact > div {
+  padding-top: 1.5rem;
+}
+
+.contact > div > p {
+  color: #333;
+  font: 1.25rem Karla;
+  margin: 0.1rem;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+
+.social-links > h3 {
+  color: #495e57;
+  font: 1.25rem Karla;
+  font-weight: 800;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.socials > a {
+  text-decoration: none;
+  font: 1.25rem karla;
+  color: #333;
+  margin: .1rem;
+  font-weight: 500;
+}

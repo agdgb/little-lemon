@@ -1,0 +1,33 @@
+.btn {
+  display: inline-flex;
+  /* width: 300px; */
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+}
+
+.btn {
+  border-radius: 64px;
+  background: #efefef;
+}
+svg {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.btn > span {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #3d3b3b;
+}
+
+.btn:hover {
+  cursor: pointer;
+  /* background-color: red; */
+  transition: 0.5s;
+}

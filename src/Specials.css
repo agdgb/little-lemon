@@ -1,0 +1,37 @@
+.container {
+  padding: 6.25rem 10% 0px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-top > a {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  font: 1.25rem Karla;
+  font-weight: 500;
+}
+
+.card-top > h1 {
+  font: 1.25rem Karla;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  gap: 2.14rem;
+  margin-top: 50px;
+}
+
+.cards > .card {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
