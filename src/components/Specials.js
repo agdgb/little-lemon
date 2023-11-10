@@ -1,9 +1,9 @@
 import React from "react";
 import "./Specials.css";
 import Card from "./Card";
-import image1 from "../src/img/img1.png";
-import image2 from "../src/img/img3.png";
-import image3 from "../src/img/img4.png";
+import image1 from "../img/img1.png";
+import image2 from "../img/img3.png";
+import image3 from "../img/img4.png";
 
 function Specials() {
   return (

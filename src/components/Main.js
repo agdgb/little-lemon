@@ -1,5 +1,5 @@
 import React from "react";
-import img5 from "./img/img5.png";
+import img5 from "../img/img5.png";
 import "./Main.css";
 
 function Main() {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import image1 from "../src/img/img2.png";
-import image2 from "../src/img/img5.png";
+import image1 from "../img/img2.png";
+import image2 from "../img/img5.png";
 
 function About() {
   return (

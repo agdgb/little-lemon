@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import cart from "./cart.svg";
+import cart from "../cart.svg";
 
 function Card(props) {
   return (

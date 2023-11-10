@@ -1,12 +1,12 @@
-import About from "./About";
+import About from "./components/About";
 import "./App.css";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import logo from "./Logo.svg";
-import Main from "./Main";
-import Specials from "./Specials";
-import Testimonials from "./Testimonials";
-import Button from "./button";
+import Main from "./components/Main";
+import Specials from "./components/Specials";
+import Testimonials from "./components/Testimonials";
+// import Button from "./button";
 
 function App() {
   return (
