@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import image1 from "../img/img5.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,12 +10,12 @@ function Footer() {
         <img src={image1} alt="" />
       </div>
       <div class="footernav">
-        <h3>Dootmat Naviagation</h3>
+        <h3>Navigation</h3>
         <div class="link-items">
-          <a href="">Home</a>
+          <Link to="/">Home</Link>
           <a href="">About</a>
           <a href="">Menu</a>
-          <a href="">Reservations</a>
+          <Link href="/booking">Book Table</Link>
           <a href="">Order Online</a>
           <a href="">Login</a>
         </div>
@@ -34,7 +35,7 @@ function Footer() {
         </div>
       </div>
       <div class="social-links">
-        <h3>Social Media Links</h3>
+        <h3>Find us on</h3>
         <div class="socials">
             <a href="" class="facebook">Facebook</a>
             <a href="" class="facebook">Twitter</a>

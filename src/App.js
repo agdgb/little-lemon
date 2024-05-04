@@ -1,24 +1,21 @@
-import About from "./components/About";
-import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import logo from "./Logo.svg";
-import Main from "./components/Main";
-import Specials from "./components/Specials";
-import Testimonials from "./components/Testimonials";
-// import Button from "./button";
+import './App.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Container from './components/Container'
+import { Route, Routes } from 'react-router-dom'
+import BookingForm from './components/BookingForm'
 
-function App() {
+function App () {
   return (
     <>
-      <Header props={logo} />
-      <Main>Main</Main>
-      <Specials></Specials>
-      <Testimonials></Testimonials>
-      <About></About>
-      <Footer>footer</Footer>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Container />} />
+        <Route path='/booking' element={<BookingForm />} />
+      </Routes>
+      <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

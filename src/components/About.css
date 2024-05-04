@@ -4,19 +4,24 @@
   justify-content: space-between;
   gap: 3.25rem;
   margin: 0 10%;
-  /* min-height: 177rem; */
   flex: 1;
   padding-bottom: 3.25rem;
-  border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
 }
 
 .about-left > .title {
-  font: 4rem "Markazi Text";
+  font: 4rem 'Markazi Text';
   font-weight: 500;
 }
 
 .about-left > .subtitle {
-  font: 2.5rem "Markazi Text";
+  font: 2.5rem 'Markazi Text';
   font-weight: 400;
   color: #333;
   padding-bottom: 2.5rem;
