@@ -17,6 +17,7 @@
 
 .testimonies {
   display: flex;
+  flex: 1;
   justify-content: space-between;
   gap: 2.14rem;
   padding-top: 2rem;
