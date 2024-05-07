@@ -1,8 +1,48 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, updateTimes }) => {
   const [minDate, setMinDate] = useState('')
+  const [occasions, setOccasions] = useState([])
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    defaultValues: {
+      guests: 1
+    }
+  })
+
+  const initializeOccasion = async () => {
+    const response = await fetch('http://localhost:3001/occasions')
+    const data = await response.json()
+    return data
+  }
+
+  const handleBooking = async formData => {
+    console.log('here')
+    try {
+      const response = await fetch('http://localhost:3001/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
+
+      const result = await response.json()
+      alert('Form submitted successfully.')
+      reset()
+    } catch (error) {
+      alert('Error submitting form.')
+    }
+  }
 
   useEffect(() => {
     const today = new Date()
@@ -10,26 +50,18 @@ const BookingForm = () => {
     setMinDate(formattedDate)
   }, [])
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
-    defaultValues: {
-      resDate: minDate,
-      resTime: '18:00',
-      guests: 1,
-      occasion: 'none'
-    }
-  })
+  useEffect(() => {
+    initializeOccasion().then(setOccasions)
+  }, [])
 
   const onSubmit = data => {
-    if (data.occasion === 'none') {
-      alert('Please select occasion!')
-      return
-    }
-    console.log(data)
-    alert('Booking Successful.')
+    handleBooking(data)
+  }
+
+  const handleDateChange = e => {
+    const selectedDate = e.target.value
+    console.log('selectedDate', selectedDate)
+    updateTimes(selectedDate)
   }
 
   return (
@@ -43,13 +75,24 @@ const BookingForm = () => {
           <input
             className='form-control'
             type='date'
-            value={minDate}
             min={minDate}
             id='resDate'
-            {...register('resDate', { required: 'Date is required' })}
+            aria-required='true'
+            aria-describedby='resDate-error'
+            onChange={handleDateChange}
+            {...register('resDate', {
+              required: 'Date is required',
+              onChange: e => {
+                handleDateChange(e)
+              }
+            })}
           />
           {errors.resDate && (
-            <span className='text-sm text-danger'>
+            <span
+              className='text-sm text-danger'
+              id='resDate-error'
+              role='alert'
+            >
               {errors.resDate.message}
             </span>
           )}
@@ -59,12 +102,29 @@ const BookingForm = () => {
           <label className='form-label' htmlFor='resTime'>
             Reservation Time:
           </label>
-          <select className='form-select' id='resTime' {...register('resTime')}>
-            <option value='18:00'>18:00</option>
-            <option value='19:00'>19:00</option>
-            <option value='20:00'>20:00</option>
-            <option value='21:00'>21:00</option>
+          <select
+            className='form-select'
+            id='resTime'
+            aria-required='true'
+            aria-describedby='resTime-error'
+            {...register('resTime', { required: 'Please select time.' })}
+          >
+            <option value=''>Select</option>
+            {availableTimes.map(time => (
+              <option key={time.id} value={time.time}>
+                {time.time}
+              </option>
+            ))}
           </select>
+          {errors.resTime && (
+            <span
+              className='text-sm text-danger'
+              id='resTime-error'
+              role='alert'
+            >
+              {errors.resTime.message}
+            </span>
+          )}
         </div>
 
         <div className='col-sm-12 col-md-6 col-lg-6'>
@@ -77,6 +137,8 @@ const BookingForm = () => {
             id='guests'
             min={1}
             max={10}
+            aria-required='true'
+            aria-describedby='guests-error'
             {...register('guests', {
               required: 'Number of guests is required',
               min: { value: 1, message: 'Minimum is 1' },
@@ -84,7 +146,13 @@ const BookingForm = () => {
             })}
           />
           {errors.guests && (
-            <span className='text-sm text-danger'>{errors.guests.message}</span>
+            <span
+              className='text-sm text-danger'
+              id='guests-error'
+              role='alert'
+            >
+              {errors.guests.message}
+            </span>
           )}
         </div>
 
@@ -95,12 +163,28 @@ const BookingForm = () => {
           <select
             className='form-select'
             id='occasion'
-            {...register('occasion')}
+            aria-required='true'
+            aria-describedby='occasion-error'
+            {...register('occasion', {
+              required: 'Occasion is required'
+            })}
           >
-            <option value='none'>None</option>
-            <option value='birthday'>Birthday</option>
-            <option value='anniversary'>Anniversary</option>
+            <option value=''>Select</option>
+            {occasions.map(o => (
+              <option key={o.id} value={o.occasion}>
+                {o.occasion}
+              </option>
+            ))}
           </select>
+          {errors.occasion && (
+            <span
+              className='text-sm text-danger'
+              id='occasion-error'
+              role='alert'
+            >
+              {errors.occasion.message}
+            </span>
+          )}
         </div>
 
         <div className='mt-2'>

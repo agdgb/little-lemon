@@ -1,0 +1,47 @@
+{
+  "occasions": [
+    {
+      "occasion": "Birthday",
+      "id": "6175"
+    },
+    {
+      "occasion": "Anniversary",
+      "id": "71da"
+    }
+  ],
+  "times": [
+    {
+      "time": "8:00",
+      "id": "a1b2"
+    },
+    {
+      "time": "9:30",
+      "id": "c3d4"
+    },
+    {
+      "time": "10:00",
+      "id": "e5f6"
+    },
+    {
+      "time": "11:00",
+      "id": "g7h8"
+    },
+    {
+      "time": "07:00",
+      "id": "i9j0"
+    },
+    {
+      "time": "02:30",
+      "id": "k1l2"
+    },
+    {
+      "time": "04:00",
+      "id": "m3n4"
+    },
+    {
+      "time": "06:00",
+      "id": "o5p6"
+    }
+  ],
+  "bookings": []
+}

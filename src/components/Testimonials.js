@@ -20,8 +20,9 @@ function Testimonials () {
       <article>
         <h1 className='testimonials-header'> testimonials</h1>
         <div className='testimonies'>
-          {selectedReviews.map(review => (
+          {selectedReviews.map((review, index) => (
             <Testimony
+              key={index}
               profile={review.profile}
               customerName={review.Name}
               title={review.Title}
