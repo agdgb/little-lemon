@@ -79,7 +79,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
             id='resDate'
             aria-required='true'
             aria-describedby='resDate-error'
-            onChange={handleDateChange}
+            // onChange={handleDateChange}
             {...register('resDate', {
               required: 'Date is required',
               onChange: e => {
